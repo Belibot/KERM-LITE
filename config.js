@@ -7,16 +7,16 @@ const DATABASE_URL = process.env.DATABASE_URL || "./database.db";
 module.exports = {
    // Boolean Values (converted from Strings)
    LOGS: toBool(process.env.LOGS) || false,
-   ANTILINK: toBool(process.env.ANTI_LINK) || false,
+   ANTILINK: toBool(process.env.ANTI_LINK) || true,
    HEROKU: toBool(process.env.HEROKU) || false,
    AUTO_READ: toBool(process.env.AUTO_READ) || false,
    AUTO_STATUS_READ: toBool(process.env.AUTO_STATUS_READ) || true,
-   DELETED_LOG: toBool(process.env.DELETED_LOG) || true,
+   DELETED_LOG: toBool(process.env.DELETED_LOG) || false,
    STATUS_SAVER: toBool(process.env.STATUS_SAVER) || false,
    AUTO_REACT: toBool(process.env.AUTO_REACT) || false,
 
    // String Values
-   SESSION_ID: process.env.SESSION_ID || "", // Put your session
+   SESSION_ID: process.env.SESSION_ID || "KermLite~z7be2Ya5", // Put your session
    HANDLERS: process.env.HANDLER === "false" || process.env.HANDLER === "null" ? "^" : "[.]",
    BOT_INFO: process.env.BOT_INFO || "Kɢᴛᴇᴄʜ;KᴇʀᴍLɪᴛᴇ⚡️;https://telegra.ph/file/3ac47cbad32a86aa12251.jpg", // YourName;BotName;Image/VideoLink
    SUDO: process.env.SUDO || "237656520674",
